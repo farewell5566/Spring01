@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--id/name是唯一的，name可以同时存在
+    通过human、star都可以获取出来-->
+<!--    <bean id ="person" name = "human,star" class = "Person">
+        <constructor-arg name = "name" value = "xingxiaojiao"></constructor-arg>
+        <constructor-arg name = "id" value = "30"></constructor-arg>
+        <constructor-arg name = "food" ref = "food"></constructor-arg>
+    </bean>-->
+
+    <bean id ="person" name = "human,star" class = "Person">
+        <property name = "name" value = "xingxiaojiao"></property>
+        <property name = "id" value = "30"></property>
+        <property name = "food" ref = "food"></property>
+        <property name ="properties" >
+            <value>
+                aaa=www.baidu.com
+                bbb=555
+                ccc=test
+            </value>
+        </property>
+        <property name ="list">
+            <array>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+                <value>ddd</value>
+            </array>
+        </property>
+        <property name ="set">
+            <array>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+                <value>ccc</value>
+            </array>
+        </property>
+        <property name ="map">
+            <map>
+                <entry key="1" value="1st"></entry>
+                <entry key="2" value="2nd"></entry>
+                <entry key="3" value="3rd"></entry>
+            </map>
+        </property>
+        <property name="array">
+            <array>
+                <value>arr1</value>
+                <value>arr2</value>
+                <value>arr3</value>
+                <value>arr4</value>
+            </array>
+        </property>
+
+    </bean>
+
+    <bean id ="food" class = "Food">
+        <property name = "name" value="tomato"></property>
+    </bean>
+
+    <alias name = "person"  alias = "person2"></alias>
+
+
+</beans>

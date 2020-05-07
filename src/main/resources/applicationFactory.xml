@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--动态工厂-->
+<!--    <bean id = "carFactory" class="CarFactory"></bean>
+    <bean id = "car" factory-bean="carFactory" factory-method="getCar"> &lt;!&ndash;这里不用确认class 直接可以&ndash;&gt;
+        <constructor-arg value="Audi"></constructor-arg>
+    </bean>-->
+
+    <!--静态工厂-->
+ <!--   <bean id = "car" class = "CarFactory" factory-method="getCar">
+        <constructor-arg value = "Audi"></constructor-arg>
+    </bean>-->
+
+
+
+
+
+
+</beans>
